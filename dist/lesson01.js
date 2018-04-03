@@ -21,16 +21,16 @@ function getAlertSubscribers(level) {
     var emails = new Array();
     switch (level) {
         case Alertlevel.info:
-            emails.push("cst@domain.com");
+            emails.push('cst@domain.com');
             break;
         case Alertlevel.warning:
-            emails.push("development@domain.com");
+            emails.push('development@domain.com');
             break;
         case Alertlevel.error:
-            emails.push("management@domain.com");
+            emails.push('management@domain.com');
             break;
         default:
-            throw new Error("Invalid argument!");
+            throw new Error('Invalid argument!');
     }
     return emails;
 }
@@ -38,27 +38,35 @@ getAlertSubscribers(Alertlevel.info);
 // 函数
 function greet(name) {
     if (name) {
-        return "Hi" + name;
+        return 'Hi' + name;
     }
     else {
-        return "Hi";
+        return 'Hi';
     }
 }
 // 箭头函数
 var hello = function (name) {
     if (name) {
-        return "hi" + name;
+        return 'hi' + name;
     }
     else {
-        return "hi";
+        return 'hi';
     }
 };
 // 匹配匿名函数
 var great = function (name) {
     if (name) {
-        return "hi" + name;
+        return 'hi' + name;
     }
     else {
-        return "hi";
+        return 'hi';
     }
 };
+// 无返回值的函数
+var returnNull = function () {
+    // do something but return null
+};
+// 回调函数
+function sume(a, b, callback) {
+    callback(a + b);
+}
